@@ -1,3 +1,38 @@
+# Extended Kalman Filter Project
+[FusionEKF.cpp]: ./src/FusionEKF.cpp
+[kalman_filter.cpp]: ./src/kalman_filter.cpp
+[tools.cpp]: ./src/tools.cpp
+[CMakeLists.txt]: ./CMakeLists.txt
+
+List of files
+---
+* [FusionEKF.cpp][FusionEKF.cpp]: initializes the filter, calls the predict function, call the updtate function
+* [kalman_filter.cpp][kalman_filter.cpp]: defines the predict function, the update function for lidar, and the update function for radar
+* [tools.cpp][tools.cpp]: functoin to calculate the RMSE and the Jacobian matrix
+
+How to run
+---
+1. run the [simulator](https://github.com/udacity/self-driving-car-sim/releases/)
+2. select the project 1/2: EKF and UKF 
+3. go to the file directory and execute
+```sh
+cd build && ./ExtendedKF
+```
+if you see 
+#### Listening to port 4567
+#### Connected!!!
+then all is done.
+
+## Project rubric
+Compling
+---
+My OS is ubuntu 16.04 LTS. There was no error in compling. I did not change [CMakeLists.txt][CMakeLists.txt].
+
+Accuracy
+---
+
+
+# **Original Document**
 # Extended Kalman Filter Project Starter Code
 Self-Driving Car Engineer Nanodegree Program
 
