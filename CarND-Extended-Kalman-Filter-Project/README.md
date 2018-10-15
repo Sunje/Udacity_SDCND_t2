@@ -39,6 +39,20 @@ Accuracy
 * EKF with dataset 2
 ![alt text][image2]
 
+Follows the Correct Algorithm
+---
+#### Your Sensor Fusion algorithm follows the general processing flow as taught in the preceding lessons.
+* Overall sensor fusion algorithm can be found in [FusionEKF.cpp][FusionEKF.cpp] (lines 56-157), [kalman_filter.cpp][kalman_filter.cpp] (lines 23-89), and [tools.cpp][tools.cpp] (lines 12-74).
+
+#### Your Kalman Filter algorithm handles the first measurements appropriately.
+* The first measurement is handled in [FusionEKF.cpp][FusionEKF.cpp] (lines 62-94).
+
+#### Your Kalman Filter algorithm first predicts and updates.
+* The first measurement is handled in [FusionEKF.cpp][FusionEKF.cpp] (lines 96-157).
+
+#### Your Kalman Filter can handle radar and lidar measurements.
+* Radar and lidar measurement are handled seperately in [FusionEKF.cpp][FusionEKF.cpp] (lines 132-157).
+
 # **Original Document**
 # Extended Kalman Filter Project Starter Code
 Self-Driving Car Engineer Nanodegree Program
