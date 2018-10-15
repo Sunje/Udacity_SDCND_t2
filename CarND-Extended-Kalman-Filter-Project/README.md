@@ -3,8 +3,9 @@
 [kalman_filter.cpp]: ./src/kalman_filter.cpp
 [tools.cpp]: ./src/tools.cpp
 [CMakeLists.txt]: ./CMakeLists.txt
-[image1]: ./img/EKF with dataset 1.png
-[image2]: ./img/EKF with dataset 2.png
+[//]: # (Image References)
+[image1]: ./img/EKF with dataset 1.png "dataset 1"
+[image2]: ./img/EKF with dataset 2.png "dataset 2"
 
 List of files
 ---
