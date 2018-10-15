@@ -1,4 +1,5 @@
 # Extended Kalman Filter Project
+[Eigen.tar.gz]: ./src/Eigen.tar.gz
 [FusionEKF.cpp]: ./src/FusionEKF.cpp
 [kalman_filter.cpp]: ./src/kalman_filter.cpp
 [tools.cpp]: ./src/tools.cpp
@@ -15,9 +16,10 @@ List of files
 
 How to run
 ---
-1. run the [simulator](https://github.com/udacity/self-driving-car-sim/releases/)
-2. select the project 1/2: EKF and UKF 
-3. go to the file directory and execute
+1. upzip the [Eigen.tar.gz][Eigen.tar.gz] file
+2. run the [simulator](https://github.com/udacity/self-driving-car-sim/releases/)
+3. select the project 1/2: EKF and UKF 
+4. go to the file directory and execute
 ```
 cd build && ./ExtendedKF
 ```
