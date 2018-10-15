@@ -18,7 +18,7 @@ How to run
 1. run the [simulator](https://github.com/udacity/self-driving-car-sim/releases/)
 2. select the project 1/2: EKF and UKF 
 3. go to the file directory and execute
-```sh
+```
 cd build && ./ExtendedKF
 ```
 if you see 
