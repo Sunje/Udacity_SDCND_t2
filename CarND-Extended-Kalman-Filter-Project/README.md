@@ -4,8 +4,8 @@
 [tools.cpp]: ./src/tools.cpp
 [CMakeLists.txt]: ./CMakeLists.txt
 [//]: # (Image References)
-[image1]: ./img/EKF with dataset 1.png "dataset 1"
-[image2]: ./img/EKF with dataset 2.png "dataset 2"
+[image1]: ./img/EKF_with_dataset1.png "dataset 1"
+[image2]: ./img/EKF_with_dataset2.png "dataset 2"
 
 List of files
 ---
