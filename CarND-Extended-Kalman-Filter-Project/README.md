@@ -3,6 +3,8 @@
 [kalman_filter.cpp]: ./src/kalman_filter.cpp
 [tools.cpp]: ./src/tools.cpp
 [CMakeLists.txt]: ./CMakeLists.txt
+[image1]: ./img/EKF with dataset 1.png
+[image2]: ./img/EKF with dataset 2.png
 
 List of files
 ---
@@ -23,14 +25,15 @@ if you see
 #### Connected!!!
 then all is done.
 
-## Project rubric
+# Project rubric
 Compling
 ---
 My OS is ubuntu 16.04 LTS. There was no error in compling. I did not change [CMakeLists.txt][CMakeLists.txt].
 
 Accuracy
 ---
-
+![alt text][image1]
+![alt text][image2]
 
 # **Original Document**
 # Extended Kalman Filter Project Starter Code
