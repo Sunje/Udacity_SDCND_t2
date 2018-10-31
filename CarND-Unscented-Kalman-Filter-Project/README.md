@@ -59,7 +59,7 @@ Follows the Correct Algorithm
 * The sequence can be found in [ukf.cpp][ukf.cpp] (lines 130-147).
 
 #### Your Kalman Filter can handle radar and lidar measurements.
-* Radar and lidar measurement are handled seperately in [FusionEKF.cpp][FusionEKF.cpp] (lines 138-147).
+* Radar and lidar measurement are handled seperately in [ukf.cpp][ukf.cpp] (lines 138-147).
 
 
 Additional (NIS values) 
@@ -73,9 +73,9 @@ Additional (NIS values)
 Unfortunately, this attempt has been failed. And I cannot find a reason why it doesn't work as expected because of my lack of c++ skills. 
 
 * The currently set noise parameter values have been set with reference to other studendt's work.
-** https://github.com/jeremy-shannon/CarND-Unscented-Kalman-Filter-Project
-** https://github.com/NikolasEnt/Unscented-Kalman-Filter
-** https://github.com/darienmt/CarND-Unscented-Kalman-Filter-P2
+- https://github.com/jeremy-shannon/CarND-Unscented-Kalman-Filter-Project
+- https://github.com/NikolasEnt/Unscented-Kalman-Filter
+- https://github.com/darienmt/CarND-Unscented-Kalman-Filter-P2
 
 
 
