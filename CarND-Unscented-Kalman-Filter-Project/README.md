@@ -1,3 +1,84 @@
+# Unscented Kalman Filter Project
+
+[Eigen.tar.gz]: ./src/Eigen.tar.gz
+[main.cpp]: ./src/main.cpp
+[ukf.cpp]: ./src/ukf.cpp
+[tools.cpp]: ./src/tools.cpp
+[tools.h]: ./src/tools.h
+[CMakeLists.txt]: ./CMakeLists.txt
+[//]: # (Image References)
+[image1]: ./img/UKF_with_dataset1.png "dataset 1"
+[image2]: ./img/UKF_with_dataset2.png "dataset 2"
+
+List of Files
+---
+* [ukf.cpp][ukf.cpp]: provides the UKF algorithm.
+* [tools.cpp][tools.cpp]: provides the RMSE calculation function. (And storing the NIS value function, but it doesn't work well)
+
+How to run
+---
+1. upzip the [Eigen.tar.gz][Eigen.tar.gz] file
+2. run the [simulator](https://github.com/udacity/self-driving-car-sim/releases/)
+3. select the project 1/2: EKF and UKF 
+4. go to the file directory and execute
+```
+cd build && ./ExtendedKF
+```
+if you see 
+#### Listening to port 4567
+#### Connected!!!
+then all is done.
+
+# Project rubric
+
+Compling
+---
+My OS is ubuntu 16.04 LTS. There was no error in compling. I did not change [CMakeLists.txt][CMakeLists.txt].
+
+
+Accuracy
+---
+#### px, py, vx, vy output coordinates must have an RMSE <= [.09, .10, .40, .30] when using the file: "obj_pose-laser-radar-synthetic-input.txt", which is the same data file the simulator uses for Dataset 1.
+
+* UKF with dataset 1
+![alt text][image1]
+
+* UKF with dataset 2
+![alt text][image2]
+
+
+Follows the Correct Algorithm
+---
+#### Your Sensor Fusion algorithm follows the general processing flow as taught in the preceding lessons.
+* The overall sensor fusion algorithm can be found in [ukf.cpp][ukf.cpp] (lines 15-469).
+
+#### Your Kalman Filter algorithm handles the first measurements appropriately.
+* The first measurement is handled in [ukf.cpp][ukf.cpp] (lines 97-128).
+
+#### Your Kalman Filter algorithm first predicts then updates.
+* The sequence can be found in [ukf.cpp][ukf.cpp] (lines 130-147).
+
+#### Your Kalman Filter can handle radar and lidar measurements.
+* Radar and lidar measurement are handled seperately in [FusionEKF.cpp][FusionEKF.cpp] (lines 138-147).
+
+
+Additional (NIS values) 
+---
+#### Checking NIS values and tuning noise parameters.
+* As suggested in the lecture, I wanted to check the NIS values to see if the noise parameters(`std_a_` and `std_yawdd_`) were set appropriately. For each UKF step, I tried to store the NIS value in a dat file. This attempt has been made as follows.
+1. [ukf.cpp][ukf.cpp]: Calculates the NIS (lines 355, 466).
+2. [main.cpp][main.cpp]: Store the NIS by using `StoreNIS` function (line 132).
+3. [tools.h][tools.h]: `StoreNIS` function declaration (line 34).
+4. [tools.cpp][tools.cpp]: `StoreNIS` function definition (lines 57-86).
+Unfortunately, this attempt has been failed. And I cannot find a reason why it doesn't work as expected because of my lack of c++ skills. 
+
+* The currently set noise parameter values have been set with reference to other studendt's work.
+** https://github.com/jeremy-shannon/CarND-Unscented-Kalman-Filter-Project
+** https://github.com/NikolasEnt/Unscented-Kalman-Filter
+** https://github.com/darienmt/CarND-Unscented-Kalman-Filter-P2
+
+
+
 # Unscented Kalman Filter Project Starter Code
 Self-Driving Car Engineer Nanodegree Program
 
