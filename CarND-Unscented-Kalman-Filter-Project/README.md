@@ -66,10 +66,12 @@ Additional (NIS values)
 ---
 #### Checking NIS values and tuning noise parameters.
 * As suggested in the lecture, I wanted to check the NIS values to see if the noise parameters(`std_a_` and `std_yawdd_`) were set appropriately. For each UKF step, I tried to store the NIS value in a dat file. This attempt has been made as follows.
+
     - [ukf.cpp][ukf.cpp]: Calculates the NIS (lines 355, 466).
     - [main.cpp][main.cpp]: Store the NIS by using `StoreNIS` function (line 132).
     - [tools.h][tools.h]: `StoreNIS` function declaration (line 34).
     - [tools.cpp][tools.cpp]: `StoreNIS` function definition (lines 57-86).
+    
 Unfortunately, this attempt has been failed. And I cannot find a reason why it doesn't work as expected because of my lack of c++ skills. 
 
 * The currently set noise parameter values have been set with reference to other studendt's work.
