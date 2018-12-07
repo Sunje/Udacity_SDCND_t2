@@ -23,6 +23,12 @@ then all is done.
 
 ![alt_text][image1]
 
+* references
+  - https://github.com/mvirgo/Kidnapped-Vehicle-Project
+  - https://github.com/pechyony/kidnapped-vehicle
+  - https://github.com/jeremy-shannon/CarND-Kidnapped-Vehicle-Project
+  - https://github.com/darienmt/CarND-Kidnapped-Vehicle-P3
+
 
 # Overview
 This repository contains all the code needed to complete the final project for the Localization course in Udacity's Self-Driving Car Nanodegree.
