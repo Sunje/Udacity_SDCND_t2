@@ -1,3 +1,29 @@
+# Kidnapped Vehicle Project
+
+[particle_filter.cpp]: ./src/particle_filter.cpp
+[image1]: ./img/KVP_result.png "result"
+
+
+List of Files
+---
+* [particle_filter_cpp][[particle_filter_cpp]: provides the particle filter algorithm.
+
+How to run
+---
+1. run the [simulator](https://github.com/udacity/self-driving-car-sim/releases/)
+2. select the project 3: Kidnapped Vehicle
+3. go to the file directory and execute
+```
+cd build && ./ExtendedKF
+```
+if you see 
+#### Listening to port 4567
+#### Connected!!!
+then all is done.
+
+![alt_text][image1]
+
+
 # Overview
 This repository contains all the code needed to complete the final project for the Localization course in Udacity's Self-Driving Car Nanodegree.
 
