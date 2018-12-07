@@ -6,7 +6,7 @@
 
 List of Files
 ---
-* [particle_filter.cpp][[particle_filter.cpp]: provides the particle filter algorithm.
+* [particle_filter.cpp][particle_filter.cpp]: provides the particle filter algorithm.
 
 How to run
 ---
