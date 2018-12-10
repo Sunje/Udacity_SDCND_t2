@@ -1,3 +1,38 @@
+# PID Controller Project
+
+[main.cpp]: ./src/main.cpp
+[PID.h]: ./src/PID.h
+[PID.cpp]: ./src/PID.cpp
+[image1]: ./img/PID_simulation.png "simulation"
+[image2]: ./img/PID_terminal.png "terminal"
+
+List of Files
+---
+* [main.cpp][main.cpp]: main script, the initial variables are declared in here.
+* [PID.h][PID.h]: header file for PID.cpp script.
+* [PID.cpp][PID.cpp]: provides the PID control algorithm.
+
+How to run
+---
+1. run the [simulator](https://github.com/udacity/self-driving-car-sim/releases/)
+2. select the project 4: PID Controller
+3. go to the file directory and execute
+```
+cd build && ./ExtendedKF
+```
+if you see 
+#### Listening to port 4567
+#### Connected!!!
+then all is done.
+
+![alt_text][image1]
+![alt_text][image2]
+
+* references
+  - https://github.com/jeremy-shannon/CarND-PID-Control-Project
+  - https://github.com/darienmt/CarND-PID-Control-P4
+
+
 # CarND-Controls-PID
 Self-Driving Car Engineer Nanodegree Program
 
