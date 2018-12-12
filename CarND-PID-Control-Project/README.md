@@ -35,9 +35,10 @@ Reflection
 
 #### Student discussess how they chose the final hyperparameters (P, I, D coefficients)
 
-* references
-  - https://github.com/jeremy-shannon/CarND-PID-Control-Project
-  - https://github.com/darienmt/CarND-PID-Control-P4
+References
+---
+* https://github.com/jeremy-shannon/CarND-PID-Control-Project
+* https://github.com/darienmt/CarND-PID-Control-P4
 
 
 # CarND-Controls-PID
