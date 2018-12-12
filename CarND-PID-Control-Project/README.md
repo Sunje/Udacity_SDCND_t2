@@ -28,6 +28,13 @@ then all is done.
 ![alt_text][image1]
 ![alt_text][image2]
 
+
+Reflection
+---
+#### Student describes the effect of the P, I, D component of the PID algorithm in their implementation.
+
+#### Student discussess how they chose the final hyperparameters (P, I, D coefficients)
+
 * references
   - https://github.com/jeremy-shannon/CarND-PID-Control-Project
   - https://github.com/darienmt/CarND-PID-Control-P4
