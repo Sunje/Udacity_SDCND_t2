@@ -48,7 +48,8 @@ Reflection
 
 #### Describe how the final hyperparameters were chosen.
 * In my implementation, the final hyperparameters are not fixed. Instead, with only the initial value of the hyperparameter declared (line 39 in [main.cpp][main.cpp]), the hyperparameters are constantly updated as the simulation progresses. The update process is based on Twiddle method introduced in the lessons. The Twiddle method is described in lines 88 to 145 of the [PID.cpp][PID.cpp].
-* Simply summarizing the method, if the `cte` exceeds the reference value (line 69 in [main.cpp][main.cpp]), the update procedure is executed. After the update, if the `cte` becomes smaller than the reference value, the update procedure stops. Otherwise, the update procedure is executed according to the condition.
+* Simply summarizing the method, if the `cte` exceeds the reference value (line 69 in [main.cpp][main.cpp]), the update procedure is executed. After the update, if the `cte` becomes smaller than the reference value, the update procedure stops. Otherwise, the update procedure is executed according to the condition. 
+* Only one hyperparemeter is updated at a time.
 
 
 Simulation
