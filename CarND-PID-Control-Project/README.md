@@ -25,15 +25,37 @@ if you see
 #### Connected!!!
 then all is done.
 
-![alt_text][image1]
-![alt_text][image2]
+
+# Project Rubric
+Compliation
+---
+#### Your code should compile.
+* The code is compiled without errors with `cmake` and `make`.
+
+
+Implementation
+---
+#### The PID procedure follows what was taught in the lessons.
+* The implementation does not deviate from the base algorithm presented in the lessons.
 
 
 Reflection
 ---
-#### Student describes the effect of the P, I, D component of the PID algorithm in their implementation.
+#### Describe the effect each of the P, I, D components had in your implementation.
+* P value: `Kp` in [PID.cpp][PID.cpp], has the largest impact on PID control and allows the vehicle to quickly converge to the reference trajectory. However, it cannot make steady state error to zero.
+* I value: `Ki` in [PID.cpp][PID.cpp], can make steady state error to zero. However, it is difficult to cope with rapid changes.
+* D value: `Kd` in [PID.cpp][PID.cpp], can cope with rapid changes. 
 
-#### Student discussess how they chose the final hyperparameters (P, I, D coefficients)
+#### Describe how the final hyperparameters were chosen.
+* In my implementation, the final hyperparameters are not fixed. Instead, with only the initial value of the hyperparameter declared (line 39 in [main.cpp][main.cpp]), the hyperparameters are constantly updated as the simulation progresses. The update process is based on Twiddle method introduced in the lessons. The Twiddle method is described in lines 88 to 145 of the [PID.cpp][PID.cpp].
+* Simply summarizing the method, if the `cte` exceeds the reference value (line 69 in [main.cpp][main.cpp]), the update procedure is executed. After the update, if the `cte` becomes smaller than the reference value, the update procedure stops. Otherwise, the update procedure is executed according to the condition.
+
+
+Simulation
+---
+#### The vehicle must successfully drive a lap around the track.
+![alt_text][image1]
+![alt_text][image2]
 
 References
 ---
