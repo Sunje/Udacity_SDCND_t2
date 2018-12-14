@@ -67,7 +67,7 @@ Implementaion
 
 Simulation
 ---
-
+![](./img/simulation.gif)
 
 
 # CarND-Controls-MPC
