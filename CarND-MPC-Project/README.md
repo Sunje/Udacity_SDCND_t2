@@ -4,8 +4,8 @@
 [MPC.cpp]: ./src/MPC.cpp
 [main.cpp]: ./src/main.cpp
 [Ipopt-3.12.7.tar.gz]: ./Ipopt-3.12.7.tar.gz
-[image1]: ./img/EKF_with_dataset1.png "dataset 1"
-[image2]: ./img/EKF_with_dataset2.png "dataset 2"
+[image1]: ./img/kinematic_model.png "kinematic model equation"
+[image2]: ./img/rotation.png "rotation"
 
 List of Files
 ---
@@ -33,10 +33,16 @@ Complilation
 #### Your code should compile
 * The code is compiled without errors with `cmake` and `make`.
 
+
 Implementaion
 ---
 #### The Model
 * The following equations are the kinematic model of the vehicle and is used in the update process.
+![alt text][image1]
+
+* `x` and `y` are the x and y position in vehicle's coordinate, respectively. `psi` and `v` are the orientation angle and speed of the vehicle, respectively. `cte` is cross track error. `epsi` is psi error. Control inputs are `delta` (steering angle) and `a` (acceleration).
+
+* The information about the parameters coming from the simulator can be found in [here](https://github.com/udacity/CarND-MPC-Project/blob/master/DATA.md).
 
 
 #### Timestep length and elapsed duration (N & dt)
@@ -46,12 +52,21 @@ Implementaion
   1. If `N` is greater than 10 with `dt` fixed, it will unnecessarily predict the future too much. This affects the provision of proper control at the current step.
   2. If `dt` is smaller than 0.1 with `N` fixed, the vehicle is controlled too frequently, causing the steering angle to oscillate.
 
+
 #### Polynomial fitting and MPC preprocessing
-* The polynomial fitting and data preprocessing procedure are described in lines 115 to 128 of the [main.cpp][main.cpp].
+* The polynomial fitting and data preprocessing procedure are described in lines 115 to 128 of the [main.cpp][main.cpp]. First, we need to transform the waypoints into the vehicle's coordinate system. The mathematical background can be found in [here](https://en.wikipedia.org/wiki/Transformation_matrix).
+![alt text][image2]
+* After the transformation, we find 3rd order polynomial function through the polynomial fitting. As a result, we get coefficients of the 3rd order polynomial function.
+* Since we have already transformed the points to perform tasks in the vehicle's coordinate system, the initial states (`x`,`y`,`psi`) of the vehicle are set to zero. That makes `cte` and `epsi` calculations simple as the states are all zero. The code is described in lines 130 to 134 of the [main.cpp][main.cpp].
 
 
 #### Model predictive control with latency
-* Handling latency is described in lines 136 to 147 of the [main.cpp][main.cpp].
+* Handling latency is described in lines 136 to 147 of the [main.cpp][main.cpp]. The predicted latency is set to 0.1 second (line 79 in [main.cpp][main.cpp]). That is, it is assumed that a delay of about 0.1 seconds occurs in the control input to the vehicle. Therefore, by solving MPC for the state after 0.1 seconds, and we take the delay into consideration. The states after 0.1 seconds are calculated in lines 136 to 143 of the [main.cpp][main.cpp].
+* Then, we solve MPC and finally get the optimal control inputs (lines 155 to 156 in [main.cpp][main.cpp]). 
+
+
+Simulation
+---
 
 
 
