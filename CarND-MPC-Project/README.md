@@ -71,6 +71,12 @@ Simulation
 ![alt text](https://github.com/Sunje/Udacity_SDCND_t2/blob/master/CarND-MPC-Project/img/MPC_simulation.gif)
 
 
+References
+---
+* https://github.com/jeremy-shannon/CarND-MPC-Project
+* https://github.com/darienmt/CarND-MPC-Project-P5
+* https://github.com/mvirgo/MPC-Project
+
 # CarND-Controls-MPC
 Self-Driving Car Engineer Nanodegree Program
 
