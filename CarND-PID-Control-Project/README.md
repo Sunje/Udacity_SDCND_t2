@@ -18,7 +18,7 @@ How to run
 2. select the project 4: PID Controller
 3. go to the file directory and execute
 ```
-cd build && ./ExtendedKF
+cd build && ./pid
 ```
 if you see 
 #### Listening to port 4567
