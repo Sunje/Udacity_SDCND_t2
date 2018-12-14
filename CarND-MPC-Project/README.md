@@ -6,7 +6,7 @@
 [Ipopt-3.12.7.tar.gz]: ./Ipopt-3.12.7.tar.gz
 [image1]: ./img/kinematic_model.png "kinematic model equation"
 [image2]: ./img/rotation.png "rotation"
-[gif]: ./img/simulation.gif
+
 
 List of Files
 ---
@@ -68,7 +68,7 @@ Implementaion
 
 Simulation
 ---
-![alt text][gif]
+![alt text](https://github.com/Sunje/Udacity_SDCND_t2/blob/master/CarND-MPC-Project/img/MPC_simulation.gif)
 
 
 # CarND-Controls-MPC
