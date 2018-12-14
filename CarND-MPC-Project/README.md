@@ -1,3 +1,60 @@
+# Model Predictive Control Project
+
+[Eigen.tar.gz]: ./src/Eigen.tar.gz
+[MPC.cpp]: ./src/MPC.cpp
+[main.cpp]: ./src/main.cpp
+[Ipopt-3.12.7.tar.gz]: ./Ipopt-3.12.7.tar.gz
+[image1]: ./img/EKF_with_dataset1.png "dataset 1"
+[image2]: ./img/EKF_with_dataset2.png "dataset 2"
+
+List of Files
+---
+* [MPC.cpp][MPC.cpp]: The algorithm for MPC control is described.
+* [main.cpp][main.cpp]: The main script to run. Data preprocessing is also handled.
+
+How to run
+---
+1. unzip the [Eigen.tar.gz][Eigen.tar.gz] file
+2. unzip the [Ipopt-3.12.7.tar.gz][Ipopt-3.12.7.tar.gz] file (but, it is better to follow [this instruction](https://github.com/udacity/CarND-MPC-Project/blob/master/install_Ipopt_CppAD.md))
+3. run the [simulator](https://github.com/udacity/self-driving-car-sim/releases/)
+4. select the project 5: MPC controller
+5. go to the file directory and execute
+```
+cd build && ./mpc
+```
+if you see 
+#### Listening to port 4567
+#### Connected!!!
+then all is done.
+
+# Project Rubric
+Complilation
+---
+#### Your code should compile
+* The code is compiled without errors with `cmake` and `make`.
+
+Implementaion
+---
+#### The Model
+* The following equations are the kinematic model of the vehicle and is used in the update process.
+
+
+#### Timestep length and elapsed duration (N & dt)
+* The set `N` and `dt` values are described in lines 10 to 11 of the [MPC.cpp][MPC.cpp]. Currently, `N = 10` and `dt = 0.1` are set.
+* The increasing `N` value means that we control the vehicle with more predictions for the future. On the other hand, the decreasing `dt` value means that we control the vehicle more frequently.
+* After several attempts, I found the following characteristics.
+  1. If `N` is greater than 10 with `dt` fixed, it will unnecessarily predict the future too much. This affects the provision of proper control at the current step.
+  2. If `dt` is smaller than 0.1 with `N` fixed, the vehicle is controlled too frequently, causing the steering angle to oscillate.
+
+#### Polynomial fitting and MPC preprocessing
+* The polynomial fitting and data preprocessing procedure are described in lines 115 to 128 of the [main.cpp][main.cpp].
+
+
+#### Model predictive control with latency
+* Handling latency is described in lines 136 to 147 of the [main.cpp][main.cpp].
+
+
+
 # CarND-Controls-MPC
 Self-Driving Car Engineer Nanodegree Program
 
