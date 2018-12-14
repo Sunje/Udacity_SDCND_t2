@@ -6,7 +6,7 @@
 [Ipopt-3.12.7.tar.gz]: ./Ipopt-3.12.7.tar.gz
 [image1]: ./img/kinematic_model.png "kinematic model equation"
 [image2]: ./img/rotation.png "rotation"
-![gif]: ./img/simulation.gif
+[gif]: ./img/simulation.gif
 
 List of Files
 ---
